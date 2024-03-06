@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Tetris</title>
+</head>
+
+<body>
+    <img width="300" height="auto" src="./assets/tetris_logo.webp" alt="Logo Tetris" />
+    <div id="board">
+        <div id="game_container">
+            <div id="game_message" class="visible">PRESS R TO START</div>
+            <div id="game_background"></div>
+            <div id="game"></div>
+        </div>
+        <div id="game_info">
+            <div id="next_item_container">
+                <div id="next_item"></div>
+            </div>
+            <div>
+                <div id="score">
+                    <div>SCORE:</div>
+                    <div id="score_value">0</div>
+                </div>
+                <div id="deleted_rows">
+                    <div>ROWS:</div>
+                    <div id="deleted_rows_value">0</div>
+                </div>
+            </div>
+            <div id="sound">
+                <span>SOUND:</span>
+                <img id="sound_on_icon" class="sound_icon visible" src="./assets/sound_on.png" alt="Sound on icon" />
+                <img id="sound_off_icon" class="sound_icon" src="./assets/sound_off.png" alt="Sound off icon" />
+            </div>
+            <div id="pause">PAUSE</div>
+            <div id="instructions">
+                <div>
+                    <div>← →</div>
+                    <div>MOVE</div>
+                    <div>↑</div>
+                    <div>ROTATE</div>
+                    <div>↓</div>
+                    <div>DROP</div>
+                    <div>ENTER</div>
+                    <div>PAUSE</div>
+                    <div>R</div>
+                    <div>RESTART</div>
+                    <div>M</div>
+                    <div>SOUND ON/OFF</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
