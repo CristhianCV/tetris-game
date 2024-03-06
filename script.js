@@ -111,6 +111,8 @@ const SOUND_VOLUME = 0.4;
 // Exec
 
 document.addEventListener("keydown", key_pressed);
+document.getElementById("sound_on_icon").addEventListener("click", toggle_sound);
+document.getElementById("sound_off_icon").addEventListener("click", toggle_sound);
 
 load();
 
@@ -161,12 +163,10 @@ function key_pressed(event) {
             init();
             break;
         case "M":
-            const enable_volume1 = MUSIC.volume === 0 ? true : false;
-            enable_disable_sound(enable_volume1);
+            toggle_sound();
             break;
         case "m":
-            const enable_volume2 = MUSIC.volume === 0 ? true : false;
-            enable_disable_sound(enable_volume2);
+            toggle_sound();
             break;
         default:
             return;
@@ -557,6 +557,11 @@ function enable_disable_sound(enable_sound) {
     DROP_SOUND.volume = new_sound_volume;
     MOVE_SOUND.volume = new_sound_volume;
     GAME_OVER_SOUND.volume = new_sound_volume;
+}
+
+function toggle_sound() {
+    const enable_volume = MUSIC.volume === 0 ? true : false;
+    enable_disable_sound(enable_volume);
 }
 
 // UTILS
